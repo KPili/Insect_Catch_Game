@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+    /*Width will not be affected by adding padding or border onto element*/
+    box-sizing: border-box; 
+}
+
+
+body{
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    /*Sets the direction of the elements in flex*/
+    flex-direction: column;
+    /*Aligns the elements in the flex to center*/
+    /*If column: flex items aligned center horizontally*/
+    /*If row: flex items aligned center vertically*/
+    align-items: center;
+    /*Aligns items vertically*/
+    justify-content: center;
+    /*Justify content requires flexbox to have a height (body tag does not have a height assigned to it)*/
+    /*vh = viewport height*/
+    height: 100vh;
+    /*Prevents scroll bars to show by default*/
+    overflow: hidden;
+    /*Set Margins of elements to 0*/
+    margin: 0; 
+}
+
