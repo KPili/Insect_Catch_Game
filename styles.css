@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+:root{
+    --virusBG: lightgreen;
+}
 
 *{
     /*Width will not be affected by adding padding or border onto element*/
@@ -7,22 +11,146 @@
 
 
 body{
-    font-family: "Roboto", sans-serif;
-    display: flex;
-    /*Sets the direction of the elements in flex*/
-    flex-direction: column;
-    /*Aligns the elements in the flex to center*/
-    /*If column: flex items aligned center horizontally*/
-    /*If row: flex items aligned center vertically*/
-    align-items: center;
-    /*Aligns items vertically*/
-    justify-content: center;
-    /*Justify content requires flexbox to have a height (body tag does not have a height assigned to it)*/
-    /*vh = viewport height*/
+    font-family: "Press Start 2P", sans-serif;
     height: 100vh;
-    /*Prevents scroll bars to show by default*/
     overflow: hidden;
-    /*Set Margins of elements to 0*/
     margin: 0; 
+    text-align: center;
+    background-color: var(--virusBG);
+    color:#fff;
+    cursor: pointer;
 }
 
+a{
+    color: #fff;
+}
+
+h1{
+    line-height: 1.4;
+}
+
+.screen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.screen.up {
+    margin-top: -200vh;
+}
+
+.btn{
+    border: 0;
+    background-color: #fff;
+    color: var(--virusBG);
+    padding: 15px 20px;
+    font-family: inherit;
+}
+
+.btn:hover{
+    opacity: 0.9;
+}
+
+.btn:focus{
+    outline: 0;
+}
+
+.virus-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.virus-list li{
+    margin: 10px;
+}
+
+.choose-virus-btn{
+    background-color: transparent;
+    border: 2px solid #fff;
+    cursor: pointer;
+    font-family: inherit;
+    width: 150px;
+    height: 150px;
+}
+
+.choose-virus-btn:hover{
+    background-color: #fff;
+    color: var(--virusBG);
+}
+
+.choose-virus-btn:active{
+    background-color: rgba(255,255,255, 0.7);
+}
+
+.choose-virus-btn img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.game-container{
+    position: relative;
+}
+
+#time, #score{
+    position: absolute;
+    top: 20px;
+}
+
+#time{
+    left: 20px;
+}
+
+#score{
+    right: 20px;
+}
+
+#message{
+    line-height: 1.7;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 20px;
+    z-index: 100;
+    text-align: center;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -150%);
+    transition: transform 0.4s ease-in;
+}
+
+#message.visible{
+    opacity: 1;
+    transform: translate(-50%, 150%);
+}
+
+.virus{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform o.3s ease-out;
+    top: 200px;
+    left: 300px;
+    
+}
+
+.virus.eliminated{
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.virus.img{
+    width: 100px;
+    height: 100px;
+}

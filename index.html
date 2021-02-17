@@ -5,9 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
-    <title>Document</title>
+    <title>KPili_Project</title>
 </head>
 <body>
-    
+    <div class="screen">
+        <h1>Stop the Pandemic!</h1>
+        <button class="btn" id="start-btn">Play Game</button>
+    </div>
+
+    <div class="screen">
+        <h1>Choose your virus</h1>
+        <ul class="virus-list">
+            <li>
+                <button class="choose-virus-btn">
+                    <p>Dengue</p>
+                    <img src="images/dengue.png" alt="Dengue">
+                </button>
+            </li>
+            <li>
+                <button class="choose-virus-btn">
+                    <p>Influenza</p>
+                    <img src="images/influenza.png" alt="Influenza">
+                </button>
+            </li>
+            <li>
+                <button class="choose-virus-btn">
+                    <p>Smallpox</p>
+                    <img src="images/smallpox.png" alt="Smallpox">
+                </button>
+            </li>
+            <li>
+                <button class="choose-virus-btn">
+                    <p>SARS-CoV-2</p>
+                    <img src="images/covid.png" alt="Covid">
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="screen game-container">
+        <h3 id="time">Time: 00:00</h3>
+        <h3 id="score">Score: 0</h3>
+        <h5 id="message">
+            Are you annoyed yet?<br>
+            You are playing an impossible game!
+        </h5>
+    </div>
 </body>
 </html>
